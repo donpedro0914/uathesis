@@ -1,0 +1,87 @@
+#navigation {
+    display: none;
+}
+.clear {
+    clear: both;
+}
+#receipt_container {
+    transform:rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    height: 400px;
+}
+#receipt .col-xl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    -ms-flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#receipt .col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    -ms-flex: 0 0 66.666667%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#receipt .col-xl-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    -ms-flex: 0 0 41.666667%;
+    position: relative;
+    width: 100%;
+    min-height: 1px; 
+}
+#receipt .col-xl-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    -ms-flex: 0 0 33.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px; 
+}
+#receipt .col-md-6 {
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#receipt .table-sm td {
+  padding: 0 !important;
+}
+#receipt .table th, .table td {
+    border-top: 0 !important;
+}
+#receipt .text-left{
+    text-align:left;
+}
+#receipt .text-right{
+    text-align: right;
+}
+#receipt .table {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 100%;
+}
+#receipt .receipt_size {
+    font-size: 15px;
+}
+#receipt .item_container {
+    height: 800px;
+    position: relative;
+}
+#receipt_footer {
+    position: relative;
+    bottom:0;
+    width: 100%;
+}
