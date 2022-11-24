@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Applications;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -77,5 +78,11 @@ class HomeController extends Controller
         $app->save();
 
         return response()->json($app);
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }
