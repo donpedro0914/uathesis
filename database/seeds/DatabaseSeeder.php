@@ -15,9 +15,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'name' => 'Admin',
             'email' => 'a@a.com',
-            'type' => 'Admin',
-            'password' => bcrypt('ishopboxadmin'),
-            'p2' => 'ishopboxadmin'
+            'password' => bcrypt('admin123'),
         ]);
     }
 }

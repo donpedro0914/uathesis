@@ -21,8 +21,4 @@ class UserProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        require_once app_path() . '/Helpers/User/User.php';
-    }
 }

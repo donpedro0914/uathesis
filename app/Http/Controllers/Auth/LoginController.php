@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    // protected $redirectTo = '/';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -47,28 +47,8 @@ class LoginController extends Controller
 
         return [
             $field => $request->get($this->username()),
-            'password' => $request->password,
-            'status' => 1
+            'password' => $request->password
         ];
     }
 
-    protected function authenticated() {
-        $type = Auth::user()->type;
-
-        if ($type == 'Store Manager') {
-            return redirect('/store-manager/portal');
-        } elseif($type == 'Admin') {
-            return redirect('/dashboard/portal');
-        } elseif($type == 'Partner') {
-            return redirect('/partner/portal');
-        } elseif($type == 'Cashier') {
-            return redirect('/pos/portal');
-        } else if($type == 'Supervisor') {
-            return redirect('/supervisor/portal');
-        } else if($type == 'Manager') {
-            return redirect('/manager/portal');
-        } else {
-            return redirect('/login')->with('error', 'Incorrect username or password');
-        }
-    }
 }

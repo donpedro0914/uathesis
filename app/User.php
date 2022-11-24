@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'store_id', 'name', 'email', 'password', 'type', 'username', 'p2', 'status'
+        'name', 'email', 'password', 'username'
     ];
 
     /**
@@ -28,23 +28,4 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function store()
-    {
-        return $this->belongsTo('App\Store', 'store_id');
-    }
-
-    public function profile()
-    {
-        return $this->hasOne('App\Profile');
-    }
-
-    public function brands()
-    {
-        return $this->hasOne('App\Brand', 'user_id');
-    }
-
-    public function attendances()
-    {
-        return $this->hasMany('App\Attendance', 'user_id');
-    }
 }

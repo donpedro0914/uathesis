@@ -9,8 +9,8 @@
                     <div class="account-pages">
                         <div class="account-box">
                             <div class="account-logo-box">
-                                <h2 class="text-center">
-                                    <span class="badge">iPOS</span><span class="badge badge-primary">Concept</span>
+                                <h2 class="text-center text-primary">
+                                    {{ HTML::image('img/logo.png', '', array('style'=>'width:50%')) }}
                                 </h2>
                             </div>
                             <div class="account-content">
