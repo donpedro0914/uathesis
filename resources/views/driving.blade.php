@@ -13,11 +13,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
+    <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="mb-5">
+                    <div class="mb-5 text-center">
                         <div class="section-title position-relative mb-5">
                             <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
                             <h1 class="display-4">Driving NC II and NC III</h1>
@@ -25,6 +25,9 @@
                         {{ HTML::image('img/courses-1.jpg', '', array('class'=>'img-fluid mb-4')) }}
                         <p>The DRIVING NC II Qualification consists of competencies that a person must achieve to operate light motor vehicles classified under LTO Restriction code 1 and 2; transport passengers and loads over specified routes to local or district location and collect fare duly authorized by the relevant government agency; comply with local traffic rules and regulations and perform minor vehicle repairs and other minor servicing.</p>
                     </div>
+                </div>
+                <div class="col-lg-12">
+                    @include('global.standard_requirements')
                 </div>
                 <div class="col-lg-12">
                     <div class="py-3 px-4">

@@ -13,11 +13,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
+    <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="mb-5">
+                    <div class="mb-5 text-center">
                         <div class="section-title position-relative mb-5">
                             <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
                             <h1 class="display-4">Shielded Metal Arc Welding NC II</h1>
@@ -25,6 +25,9 @@
                         {{ HTML::image('img/courses-7.jpg', '', array('class'=>'img-fluid mb-4')) }}
                         <p>The Shielded Metal Arc Welding (SMAW) NC II Qualification consists of competencies that a person must achieve to weld carbon steel plate and pipe components as specified by layout, blueprints, diagrams, work order, welding procedure or oral instructions using shielded metal arc welding equipment.</p>
                     </div>
+                </div>
+                <div class="col-lg-12">
+                    @include('global.standard_requirements')
                 </div>
                 <div class="col-lg-12">
                     <div class="py-3 px-4">

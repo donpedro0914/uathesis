@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Applications;
 use Auth;
+use Mail;
+use App\Mail\Approved;
 
 class HomeController extends Controller
 {
@@ -55,7 +57,22 @@ class HomeController extends Controller
                 'data' => [$bartendingPending, $breadPending, $cookingPending, $drivingPending, $dshieldPending],
             ]
         ])
-        ->options([]);
+        ->optionsRaw("{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        userCallback: function(label, index, labels) {
+                            // when the floored value is the same as the value we have a whole number
+                            if (Math.floor(label) === label) {
+                                return label;
+                            }
+       
+                        },
+                    }
+                }],
+            },
+        }");
         return view('admin.dashboard', compact('chartjs'), ['pending' => $pending, 'approved' => $approved, 'total' => $total]);
     }
 
@@ -74,6 +91,21 @@ class HomeController extends Controller
     {
         $id = $request->input('id');
         $app = Applications::findOrFail($id);
+
+        $data = array(
+            'sendTo' => request('email'),
+            'full_name' => request('fullname')
+        );
+
+        $mail = Mail::send('email.approved', $data, function ($message) {
+
+            $subj = 'Your application is approved!';
+            $sendto = request('email');
+
+            $message->to($sendto, $subj)->subject($subj);
+            $message->from(Auth::user()->email, 'Admin');
+        });
+        
         $app->status = true;
         $app->save();
 

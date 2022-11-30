@@ -142,7 +142,7 @@
                                             <input type="text" class="form-control" name="age" value="{{ $application->age }}">
                                         </div>
                                         <div class="col-12 form-group">
-                                            <button type="button" class="btn btn-primary approve_btn" data-id="{{ $application->id }}">Approve</button>
+                                            <button type="button" class="btn btn-primary approve_btn" data-email="{{ $application->email }}" data-fullname="{{ $application->first_name }} {{ $application->middle_name }} {{ $application->last_name }}" data-id="{{ $application->id }}">Approve</button>
                                             <a href="{{ route('applications') }}"><button type="button" class="btn btn-secondary">Cancel</button></a>
                                         </div>
                                     </div>

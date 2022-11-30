@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Applications;
+use Mail;
+use App\Mail\Thankyou;
 
 class FrontpageController extends Controller
 {
@@ -59,6 +61,17 @@ class FrontpageController extends Controller
 
     public function application_save(Request $request)
     {
+        $data = array();
+
+        $mail = Mail::send('email.thankyou', $data, function ($message) {
+
+            $subj = 'Thank you';
+            $sendto = request('email');
+
+            $message->to($sendto, $subj)->subject($subj);
+            $message->from('info@itc.com', '');
+        });
+
         $app = new Applications;
         $app->title = $request->title;
         $app->last_name = $request->last_name;

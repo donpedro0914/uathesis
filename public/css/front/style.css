@@ -9802,7 +9802,7 @@ h6,
 }
 
 .jumbotron.page-header {
-  background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(40, 120, 235, 0.9)), url(../../img/page-header.jpg), no-repeat center center;
+  background: url(../../img/page-header.jpg), no-repeat center center;
   background-size: cover;
 }
 

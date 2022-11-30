@@ -13,6 +13,8 @@ $(document).ready(function() {
         e.preventDefault();
 
         var id = $(this).attr('data-id');
+        var fullname = $(this).attr('data-fullname');
+        var email = $(this).attr('data-email');
 
         swal({
 			title: 'Are you sure you want to approve this?',
@@ -27,7 +29,7 @@ $(document).ready(function() {
                 $.ajax({
                   type:'POST',
                   url: baseurl + 'approve',
-                  data:{'id':id},
+                  data:{'id':id, 'email':email, 'fullname':fullname},
                   success: function(data) {
                       swal(
                           'Done!',

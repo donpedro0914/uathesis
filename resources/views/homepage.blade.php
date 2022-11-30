@@ -1,6 +1,11 @@
 @extends('layouts.app_front')
 @section('content')
     @include('global.header')
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">Welcome to International Technology Center Inc.</h1>
+        </div>
+    </div>
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
@@ -14,33 +19,7 @@
                         <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">About Us</h6>
                         <h1 class="display-4">Mr. Manolo C. Toledano</h1>
                     </div>
-                    <p>ITC is an offshoot of the retirement of the founder, Mr. Manolo C. Toledano, last April 15,2012. Before his retirement from East Central Colleges, City of San Fernando Pampanga, he founded International Technology Center, Inc, His Experience as a school administrator for 42 years guarantees the stability of ITC.</p>
-                    <div class="row pt-3 mx-0">
-                        <div class="col-3 px-0">
-                            <div class="bg-success text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">0</h1>
-                                <h6 class="text-uppercase text-white">Available<span class="d-block">Subjects</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-primary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">0</h1>
-                                <h6 class="text-uppercase text-white">Online<span class="d-block">Courses</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-secondary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">0</h1>
-                                <h6 class="text-uppercase text-white">Skilled<span class="d-block">Instructors</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-warning text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">0</h1>
-                                <h6 class="text-uppercase text-white">Happy<span class="d-block">Students</span></h6>
-                            </div>
-                        </div>
-                    </div>
+                    <p style="font-size: 25px; ">ITC is an offshoot of the retirement of the founder, Mr. Manolo C. Toledano, last April 15,2012. Before his retirement from East Central Colleges, City of San Fernando Pampanga, he founded International Technology Center, Inc, His Experience as a school administrator for 42 years guarantees the stability of ITC.</p>
                 </div>
             </div>
         </div>
@@ -51,18 +30,9 @@
                 <div class="col-lg-7 my-5 pt-5 pb-lg-5">
                     <div class="section-title position-relative mb-4">
                         <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Why Choose Us?</h6>
-                        <h1 class="display-4">Why You Should Start Learning with Us?</h1>  
+                        <h1 class="display-4">Why You Should Inquire with Us?</h1>  
                     </div>
                     <p class="mb-4 pb-2">ITC is an organized educational institution, duly registered at the Securities and Exchance Commission. And ITC is also an Assessment Center on. ITC is designed to support the Training and Assessment modules implemented by TESDA to ensure quality skills development.</p>
-                    <div class="d-flex mb-3">
-                        <div class="btn-icon bg-primary mr-4">
-                            <i class="fa fa-2x fa-graduation-cap text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>Skilled Instructors</h4>
-                            <p>Labore rebum duo est Sit dolore eos sit tempor eos stet, vero vero clita magna kasd no nonumy et eos dolor magna ipsum.</p>
-                        </div>
-                    </div>
                     <div class="d-flex mb-3">
                         <div class="btn-icon bg-secondary mr-4">
                             <i class="fa fa-2x fa-certificate text-white"></i>

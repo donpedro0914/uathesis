@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
                 <a href="{{ route('homepage') }}" class="nav-item nav-link @if(request()->is('/')) active @endif">Home</a>
-                <a href="{{ route('about') }}" class="nav-item nav-link @if(request()->is('about')) active @endif">About</a>
                 <a href="{{ route('qualifications') }}" class="nav-item nav-link @if(request()->is('qualifications')) active @endif">Qualifications</a>
                 <a href="{{ route('application') }}" class="nav-item nav-link @if(request()->is('application-form')) active @endif">Application Form</a>
             </div>
