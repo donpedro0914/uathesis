@@ -10,6 +10,11 @@ use App\Mail\Approved;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function dashboard()
     {
         $pending = Applications::where('status', 0)->count();
@@ -67,7 +72,7 @@ class HomeController extends Controller
                             if (Math.floor(label) === label) {
                                 return label;
                             }
-       
+
                         },
                     }
                 }],
@@ -105,16 +110,16 @@ class HomeController extends Controller
             $message->to($sendto, $subj)->subject($subj);
             $message->from(Auth::user()->email, 'Admin');
         });
-        
+
         $app->status = true;
         $app->save();
 
         return response()->json($app);
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }

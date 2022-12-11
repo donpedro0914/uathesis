@@ -72,6 +72,22 @@ class FrontpageController extends Controller
             $message->from('info@itc.com', '');
         });
 
+        $number = substr($request->mobile,0 ,1);
+        $currentYear = date('Y');
+        $dobYear = strtotime($request->dob);
+        $getYear = date('Y', $dobYear);
+        $getCorrectAge = strval($currentYear - $getYear);
+        $age = $request->age;
+        // dd($getCorrectAge . "-" . $age);
+
+        if(($request->age >= 60 && $request->age <= 80) || $number != '9') {
+            $status = '0';
+        } else if($getCorrectAge !== $age || $request->education == 'Elementary Graduate') {
+            $status = '2';
+        }else {
+            $status = '1';
+        }
+
         $app = new Applications;
         $app->title = $request->title;
         $app->last_name = $request->last_name;
@@ -95,6 +111,7 @@ class FrontpageController extends Controller
         $app->dob = $request->dob;
         $app->birthplace = $request->birthplace;
         $app->age = $request->age;
+        $app->status = $status;
         $app->save();
 
         return ($app) ? redirect('thank-you')->with('success', 'Application form submitted') :

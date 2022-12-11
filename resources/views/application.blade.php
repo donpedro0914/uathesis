@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-4 form-group">
                         <label>District</label>
-                        <input type="text" class="form-control" name="district" required>
+                        <input type="text" class="form-control" name="district">
                     </div>
                     <div class="col-4 form-group">
                         <label>City / Municipality</label>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-3 form-group">
                         <label>Telephone</label>
-                        <input type="text" class="form-control" name="tel" maxlength="7" minlength="7" required>
+                        <input type="text" class="form-control" name="tel" maxlength="7" minlength="7">
                     </div>
                     <div class="col-3 form-group">
                         <label>Mobile</label>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="col-3 form-group">
                         <label>E-mail</label>
-                        <input type="text" class="form-control" name="email" required>
+                        <input type="text" class="form-control" name="email">
                     </div>
                     <div class="col-3 form-group">
                         <label>Fax</label>
@@ -211,7 +211,7 @@
                 title: error,
                 showConfirmButton: false,
                 timer: 1000
-            })  
+            })
         }
     });
 </script>

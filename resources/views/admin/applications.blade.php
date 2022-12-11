@@ -40,9 +40,11 @@
                                                 <td>{{ $a->sex }}</td>
                                                 <td>
                                                     @if ($a->status == 1)
-                                                            <span class="badge badge-primary">Approved</span>
+                                                        <span class="badge badge-primary">Approved</span>
+                                                    @elseif ($a->status == 2)
+                                                        <span class="badge badge-danger">Declined</span>
                                                     @else
-                                                        <span class="badge badge-danger">Pending</span>
+                                                        <span class="badge badge-warning">Pending</span>
                                                     @endif
                                                 </td>
                                                 <td>
@@ -90,7 +92,7 @@
                 title: error,
                 showConfirmButton: false,
                 timer: 1000
-            })  
+            })
         }
     });
 </script>
